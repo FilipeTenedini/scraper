@@ -18,11 +18,16 @@ async function getFiiInfosPage(page){
     // espera o dado aparecer na tela e confirma busca
     setTimeout( async () => {
       await page.keyboard.press('Enter');
-      const confirmSearch = await page.waitForSelector(' #filtrar', { timeout: 1000 });
+      const confirmSearch = await page.waitForSelector('#filtrar', { timeout: 1000 });
       await confirmSearch.click()
     }, 1000);
 
-    getData();
+
+    await page.waitForSelector('#filtrar', { hidden: true });
+
+    getData(page);
+
+
   }, 1000)
 }
 
@@ -47,3 +52,7 @@ async function run() {
 }
 
 export { run }
+
+
+
+//Number(document.querySelector('#tblDocumentosEnviados_paginate > span > a:nth-child(7)').innerText)
