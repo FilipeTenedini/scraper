@@ -1,6 +1,6 @@
 // const puppeteer = require('puppeteer');
 import puppeteer from "puppeteer";
-import { getData } from "./getFiiInfos.js";
+import { getData } from "./getInfos.js";
 import { FIIS_LIST } from "../db/fiisList.js";
 
 async function getFiiInfosPage(page){
@@ -22,7 +22,7 @@ async function getFiiInfosPage(page){
       await confirmSearch.click()
     }, 1000);
 
-
+    // aguarda até que o botão filtrar suma.
     await page.waitForSelector('#filtrar', { hidden: true });
 
     getData(page);
