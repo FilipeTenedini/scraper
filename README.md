@@ -1,4 +1,4 @@
-# webcrawler
+# scraper
 get financial market information from FNET
 
 
