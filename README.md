@@ -8,6 +8,6 @@ get financial market information from FNET
 
 ### Next features (v2):
 - refactor code with OOP
-- add link of view and download
-- create relational database
+- add link of view and download, status of comunicated
+- create database
 - save infos in database
