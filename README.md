@@ -1,4 +1,4 @@
-# Finance Scraper
+# Financial Communications Scraper
 get financial market information from FNET
 
 ### #V1:
